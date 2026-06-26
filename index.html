@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Politica de Privacidade da Route Sales — adequada a LGPD." />
+  <title>Politica de Privacidade | Route Sales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:    #000033;
+      --purple:  #330066;
+      --teal:    #66CCCC;
+      --teal-bg: #e6f9f9;
+      --white:   #FFFFFF;
+      --gray:    #F4F4F6;
+      --text:    #1a1a2e;
+      --muted:   #4a4a6a;
+      --radius:  8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Space Grotesk', 'Segoe UI', Arial, sans-serif;
+      background: var(--gray);
+      color: var(--text);
+      line-height: 1.78;
+      font-size: 15px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--navy);
+      padding: 36px 24px 28px;
+      text-align: center;
+      border-bottom: 4px solid var(--teal);
+    }
+
+    .logo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-box {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-box img {
+      max-height: 64px;
+      max-width: 260px;
+      object-fit: contain;
+    }
+
+    /* Fallback se imagem nao carregar */
+    .logo-fallback {
+      display: none;
+      color: var(--teal);
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    header .tagline {
+      color: var(--teal);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--purple) 0%, var(--navy) 100%);
+      padding: 48px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0; right: 0;
+      height: 4px;
+      background: var(--teal);
+    }
+
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .hero .meta {
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: var(--teal);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── CONTAINER ── */
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 52px 24px 72px;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 34px 38px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,51,0.07);
+      border-left: 4px solid var(--teal);
+    }
+
+    section h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      letter-spacing: 0.2px;
+    }
+
+    section h2 .num {
+      background: var(--teal);
+      color: var(--navy);
+      font-size: 0.75rem;
+      font-weight: 700;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    section p   { color: var(--muted); margin-bottom: 12px; font-size: 0.93rem; }
+    section p:last-child { margin-bottom: 0; }
+    section ul, section ol { color: var(--muted); padding-left: 22px; margin-bottom: 12px; font-size: 0.93rem; }
+    section li { margin-bottom: 7px; }
+
+    .tag {
+      display: inline-block;
+      background: var(--teal-bg);
+      color: var(--purple);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 99px;
+      margin: 2px 4px 2px 0;
+      white-space: nowrap;
+    }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.88rem; }
+    th { background: var(--navy); color: var(--teal); padding: 11px 14px; text-align: left; font-weight: 700; font-size: 0.78rem; letter-spacing: 1px; text-transform: uppercase; }
+    td { padding: 11px 14px; border-bottom: 1px solid #e8e8f0; color: var(--muted); vertical-align: top; }
+    tr:nth-child(even) td { background: #f7f7fc; }
+
+    .info-box {
+      background: var(--teal-bg);
+      border: 1px solid var(--teal);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin-top: 14px;
+      color: var(--purple);
+      font-size: 0.88rem;
+    }
+
+    /* ── CTA WHATSAPP ── */
+    .cta-area {
+      background: var(--navy);
+      text-align: center;
+      padding: 56px 24px 72px;
+      border-top: 4px solid var(--teal);
+    }
+
+    .cta-area h2 { color: var(--white); font-size: 1.55rem; font-weight: 700; margin-bottom: 10px; }
+    .cta-area p  { color: rgba(255,255,255,0.55); margin-bottom: 32px; font-size: 0.92rem; }
+
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: var(--white);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 15px 38px;
+      border-radius: 99px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+
+    .btn-wa:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    footer {
+      background: #00001a;
+      color: rgba(102,204,204,0.45);
+      text-align: center;
+      padding: 22px 24px;
+      font-size: 0.76rem;
+    }
+
+    @media (max-width: 620px) {
+      section { padding: 24px 18px; }
+      table, thead, tbody, th, td, tr { display: block; }
+      thead tr { display: none; }
+      td { border: none; padding: 6px 0; }
+      td::before { content: attr(data-label); font-weight: 700; color: var(--navy); display: block; font-size: 0.76rem; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-wrap">
+    <!--
+      INSTRUCAO: Coloque o arquivo do logo na mesma pasta que este index.html.
+      Exemplo: src="logo-route-sales.png"
+    -->
+    <div class="logo-box">
+      <img
+        src="logo-route-sales.png"
+        alt="Route Sales"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+      />
+      <span class="logo-fallback">Route Sales</span>
+    </div>
+    <span class="tagline">aceleradora de vendas</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Politica de Privacidade</h1>
+  <p class="meta">Ultima atualizacao: 25 de junho de 2026 &nbsp;|&nbsp; Versao 1.0</p>
+</div>
+
+<!-- CONTEUDO -->
+<div class="container">
+
+  <section id="introducao">
+    <h2><span class="num">1</span> Introducao</h2>
+    <p>A <strong>Route Sales</strong> ("nos", "nosso" ou "Empresa") e uma consultoria especializada em inteligencia comercial e aceleracao de vendas B2B. Esta Politica de Privacidade descreve como coletamos, usamos, armazenamos e protegemos os dados pessoais dos titulares que interagem com nossos canais digitais e servicos.</p>
+    <p>Este documento esta em conformidade com a <strong>Lei Geral de Protecao de Dados (Lei n. 13.709/2018 - LGPD)</strong> e reforca nosso compromisso com a transparencia e a seguranca das informacoes pessoais que nos sao confiadas.</p>
+    <p>Ao preencher qualquer formulario, interagir via WhatsApp, enviar e-mail ou participar de nossas campanhas de marketing, voce concorda com os termos desta Politica.</p>
+  </section>
+
+  <section id="dados-coletados">
+    <h2><span class="num">2</span> Dados Coletados</h2>
+    <p>Coletamos as seguintes categorias de dados pessoais, conforme o canal de interacao:</p>
+    <table>
+      <thead><tr><th>Canal</th><th>Dados Coletados</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Canal"><strong>Formularios LinkedIn Ads</strong></td><td data-label="Dados">Nome completo, cargo, empresa, e-mail profissional, telefone, LinkedIn URL</td></tr>
+        <tr><td data-label="Canal"><strong>Website institucional</strong></td><td data-label="Dados">Nome, e-mail, telefone, empresa, mensagem; dados de navegacao (IP, cookies, paginas acessadas)</td></tr>
+        <tr><td data-label="Canal"><strong>WhatsApp</strong></td><td data-label="Dados">Numero de telefone, nome exibido no perfil, conteudo das mensagens trocadas</td></tr>
+        <tr><td data-label="Canal"><strong>E-mail marketing</strong></td><td data-label="Dados">Endereco de e-mail, nome, taxa de abertura, cliques, preferencias de conteudo</td></tr>
+        <tr><td data-label="Canal"><strong>CRM comercial</strong></td><td data-label="Dados">Historico de contatos, anotacoes comerciais, estagio do funil, oportunidades em aberto</td></tr>
+        <tr><td data-label="Canal"><strong>Automacao de marketing</strong></td><td data-label="Dados">Comportamento em e-mails e landing pages, segmentacao por interesse, pontuacao de engajamento</td></tr>
+        <tr><td data-label="Canal"><strong>Reunioes comerciais online</strong></td><td data-label="Dados">Nome, e-mail, empresa, dados de agendamento, anotacoes de diagnostico</td></tr>
+      </tbody>
+    </table>
+    <div class="info-box"><strong>Importante:</strong> Nao coletamos dados sensiveis (art. 5., II, LGPD), como origem racial, convicao religiosa, dado genetico ou biometrico, saude, vida sexual ou dado de crianca ou adolescente.</div>
+  </section>
+
+  <section id="finalidade">
+    <h2><span class="num">3</span> Finalidade da Coleta</h2>
+    <p>Seus dados sao utilizados exclusivamente para as seguintes finalidades:</p>
+    <ul>
+      <li><span class="tag">Contato comercial</span> Responder a solicitacoes e iniciar relacionamento consultivo.</li>
+      <li><span class="tag">Materiais ricos</span> Envio de e-books, guias, planilhas e conteudos educativos solicitados.</li>
+      <li><span class="tag">Diagnostico gratuito</span> Realizacao de analise comercial gratuita mediante solicitacao.</li>
+      <li><span class="tag">Agendamento</span> Gestao de reunioes e apresentacoes da Route Sales.</li>
+      <li><span class="tag">Apresentacao de servicos</span> Proposta, negociacao e contratacao de servicos de consultoria.</li>
+      <li><span class="tag">Marketing e relacionamento</span> Campanhas segmentadas, nutricao de leads e comunicacoes periodicas.</li>
+      <li><span class="tag">Melhoria de servicos</span> Analise de metricas de engajamento para aprimorar a experiencia do usuario.</li>
+      <li><span class="tag">Obrigacoes legais</span> Cumprimento de deveres legais e contratuais aplicaveis.</li>
+    </ul>
+  </section>
+
+  <section id="base-legal">
+    <h2><span class="num">4</span> Base Legal do Tratamento</h2>
+    <p>Todo tratamento de dados realizado pela Route Sales possui fundamento expresso na LGPD (art. 7.):</p>
+    <table>
+      <thead><tr><th>Base Legal</th><th>Situacao Aplicavel</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Base"><strong>Consentimento (art. 7., I)</strong></td><td data-label="Situacao">Formularios de captacao de leads, inscricao em listas de e-mail e recebimento de materiais ricos</td></tr>
+        <tr><td data-label="Base"><strong>Legitimo interesse (art. 7., IX)</strong></td><td data-label="Situacao">Prospeccao outbound B2B, segmentacao de campanhas comerciais e analise de engajamento</td></tr>
+        <tr><td data-label="Base"><strong>Execucao de contrato (art. 7., V)</strong></td><td data-label="Situacao">Prestacao dos servicos de consultoria contratados</td></tr>
+        <tr><td data-label="Base"><strong>Obrigacao legal (art. 7., II)</strong></td><td data-label="Situacao">Atendimento a requisicoes de autoridades competentes e obrigacoes tributarias/fiscais</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="compartilhamento">
+    <h2><span class="num">5</span> Compartilhamento de Dados</h2>
+    <p>A Route Sales <strong>nao vende, aluga ou comercializa</strong> dados pessoais. O compartilhamento ocorre somente nas situacoes abaixo, sempre com garantias contratuais de seguranca:</p>
+    <ul>
+      <li><strong>Ferramentas de tecnologia:</strong> plataformas de CRM, automacao de marketing, e-mail e videoconferencia utilizadas na operacao.</li>
+      <li><strong>Fornecedores de infraestrutura:</strong> servicos de hospedagem e armazenamento em nuvem com contratos de processamento de dados (DPA) vigentes.</li>
+      <li><strong>Autoridades publicas:</strong> quando exigido por lei, ordem judicial ou regulamentacao aplicavel.</li>
+      <li><strong>Parceiros de negocios:</strong> somente mediante consentimento expresso do titular, para finalidades especificas previamente informadas.</li>
+    </ul>
+  </section>
+
+  <section id="armazenamento">
+    <h2><span class="num">6</span> Armazenamento e Seguranca</h2>
+    <p><strong>Localizacao:</strong> os dados sao armazenados em servidores situados no Brasil ou em paises que garantam nivel de protecao equivalente ao exigido pela LGPD.</p>
+    <p><strong>Prazo de retencao:</strong></p>
+    <ul>
+      <li>Leads nao convertidos: ate 24 meses apos o ultimo contato.</li>
+      <li>Dados de clientes ativos: durante toda a vigencia contratual e por ate 5 anos apos o encerramento.</li>
+      <li>Dados de e-mail marketing: enquanto o titular nao solicitar o descadastramento (opt-out).</li>
+    </ul>
+    <p><strong>Medidas de seguranca adotadas:</strong></p>
+    <ul>
+      <li>Controle de acesso com autenticacao multifator (MFA).</li>
+      <li>Criptografia de dados em transito (TLS/SSL) e em repouso.</li>
+      <li>Acesso restrito ao minimo necessario (principio do menor privilegio).</li>
+      <li>Revisoes periodicas de acessos e auditorias internas.</li>
+      <li>Plano de resposta a incidentes de seguranca.</li>
+    </ul>
+    <div class="info-box">Em caso de incidente de seguranca que possa gerar risco ou dano aos titulares, a Route Sales comunicara a ocorrencia a Autoridade Nacional de Protecao de Dados (ANPD) e aos afetados no prazo legalmente exigido.</div>
+  </section>
+
+  <section id="direitos">
+    <h2><span class="num">7</span> Direitos do Titular dos Dados</h2>
+    <p>Nos termos do art. 18 da LGPD, voce tem o direito de, a qualquer momento:</p>
+    <ul>
+      <li><strong>Confirmar</strong> se realizamos o tratamento dos seus dados pessoais.</li>
+      <li><strong>Acessar</strong> os dados que temos sobre voce.</li>
+      <li><strong>Corrigir</strong> dados incompletos, inexatos ou desatualizados.</li>
+      <li><strong>Anonimizar, bloquear ou eliminar</strong> dados desnecessarios ou tratados em desconformidade.</li>
+      <li><strong>Portabilidade</strong> dos dados a outro fornecedor de servico ou produto.</li>
+      <li><strong>Revogar o consentimento</strong> a qualquer momento, sem prejuizo da licitude do tratamento anterior.</li>
+      <li><strong>Opor-se</strong> ao tratamento realizado com base em legitimo interesse.</li>
+      <li><strong>Solicitar a exclusao</strong> dos dados tratados com base em consentimento.</li>
+      <li><strong>Receber informacoes</strong> sobre com quem compartilhamos seus dados.</li>
+      <li><strong>Peticionar</strong> perante a ANPD em caso de violacao a LGPD.</li>
+    </ul>
+  </section>
+
+  <section id="cookies">
+    <h2><span class="num">8</span> Cookies e Tecnologias de Rastreamento</h2>
+    <p>Nosso website utiliza cookies e tecnologias similares para melhorar a experiencia de navegacao e mensurar resultados de campanhas.</p>
+    <table>
+      <thead><tr><th>Tipo de Cookie</th><th>Finalidade</th><th>Obrigatorio?</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Tipo"><strong>Essenciais</strong></td><td data-label="Finalidade">Funcionamento basico do site (sessao, seguranca)</td><td data-label="Obrigatorio?">Sim</td></tr>
+        <tr><td data-label="Tipo"><strong>Analiticos</strong></td><td data-label="Finalidade">Mensurar trafego e comportamento de navegacao (ex.: Google Analytics)</td><td data-label="Obrigatorio?">Nao - opt-in</td></tr>
+        <tr><td data-label="Tipo"><strong>Marketing</strong></td><td data-label="Finalidade">Segmentacao de anuncios (LinkedIn Insight Tag, Meta Pixel)</td><td data-label="Obrigatorio?">Nao - opt-in</td></tr>
+        <tr><td data-label="Tipo"><strong>Funcionais</strong></td><td data-label="Finalidade">Preferencias de idioma e personalizacao de conteudo</td><td data-label="Obrigatorio?">Nao - opt-in</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="solicitacao">
+    <h2><span class="num">9</span> Como Solicitar Alteracao ou Exclusao dos Dados</h2>
+    <p>Para exercer qualquer direito previsto na LGPD, entre em contato pelos canais indicados na Secao 10. Sua solicitacao deve conter:</p>
+    <ol>
+      <li>Nome completo do titular.</li>
+      <li>Identificacao do dado que deseja acessar, corrigir, bloquear ou excluir.</li>
+      <li>Descricao da solicitacao (tipo de direito que deseja exercer).</li>
+      <li>Meio de contato para retorno.</li>
+    </ol>
+    <p><strong>Prazo de resposta:</strong> ate <strong>15 dias uteis</strong> a partir do recebimento da solicitacao completa, conforme art. 18 da LGPD.</p>
+    <p>Para descadastramento de e-mails, clique no link "Cancelar inscricao" presente no rodape de qualquer e-mail recebido. O opt-out e processado em ate 48 horas.</p>
+    <div class="info-box">A Route Sales podera solicitar a comprovacao de identidade antes de processar a solicitacao, a fim de proteger a privacidade do titular contra pedidos indevidos.</div>
+  </section>
+
+  <section id="contato">
+    <h2><span class="num">10</span> Informacoes de Contato e Encarregado (DPO)</h2>
+    <p>Para duvidas, solicitacoes relacionadas a privacidade ou para exercer seus direitos, entre em contato com o Encarregado pelo Tratamento de Dados (DPO) da Route Sales:</p>
+    <ul>
+      <li><strong>E-mail:</strong> <a href="mailto:comercial@routesalesbrasil.com.br" style="color:var(--teal);font-weight:600;">comercial@routesalesbrasil.com.br</a></li>
+      <li><strong>WhatsApp:</strong> disponivel pelo site oficial da Route Sales</li>
+      <li><strong>Responsavel:</strong> Equipe de Privacidade - Route Sales</li>
+    </ul>
+    <p>Caso entenda que seus direitos foram violados apos contato conosco, voce pode registrar reclamacao perante a <strong>ANPD</strong> em <a href="https://www.gov.br/anpd" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">www.gov.br/anpd</a>.</p>
+  </section>
+
+  <section id="atualizacoes">
+    <h2><span class="num">11</span> Atualizacoes desta Politica</h2>
+    <p>Esta Politica de Privacidade pode ser revisada periodicamente para refletir mudancas em nossas operacoes, na legislacao vigente ou em nossas praticas de tratamento de dados.</p>
+    <p>Quando houver alteracoes relevantes, notificaremos os titulares pelos seguintes meios:</p>
+    <ul>
+      <li>Aviso em destaque no website institucional.</li>
+      <li>Comunicacao por e-mail para os contatos cadastrados em nossas listas.</li>
+    </ul>
+    <p>A data de "Ultima atualizacao" no topo desta pagina indica quando a versao vigente foi publicada. O uso continuado de nossos servicos apos a publicacao de alteracoes implica a aceitacao dos novos termos.</p>
+  </section>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-area">
+  <h2>Tem duvidas sobre sua privacidade?</h2>
+  <p>Nossa equipe esta pronta para esclarecer qualquer questao sobre o uso dos seus dados.</p>
+  <a href="mailto:comercial@routesalesbrasil.com.br" class="btn-wa" style="background: var(--teal); color: var(--navy);">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    Falar com a Route Sales
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 Route Sales. Todos os direitos reservados. &nbsp;|&nbsp; CNPJ: [Insira o CNPJ] &nbsp;|&nbsp; Politica de Privacidade v1.0</p>
+</footer>
+
+</body>
+</html>
